@@ -333,4 +333,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Acknowledgements 🙏
 The _printf function emulates functionality of the C standard library function printf. This README borrows from the Linux man page printf(3).
 
-This program was written as part of the curriculum for Holberton School. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this link.
+This program was written as part of the curriculum for ALX-Holberton School. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this link.
