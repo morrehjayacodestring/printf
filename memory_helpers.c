@@ -1,4 +1,4 @@
-#include <stdlib.h>
+
 #include "holberton.h"
 
 unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
@@ -61,7 +61,7 @@ buffer_t *init_buffer(void)
 		return (NULL);
 
 	output->buffer = malloc(sizeof(char) * 1024);
-	if (output->buffer == NULL \n)
+	if (output->buffer == NULL)
 	{
 		free(output);
 		return (NULL);
