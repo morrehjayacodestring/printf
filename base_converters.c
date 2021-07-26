@@ -93,7 +93,7 @@ unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
 				ret += _memcpy(output, &pad, 1);
 		}
 		if (((flags >> 5) & 1) == 1) /* Print 0x for ptr address */
-			ret += _memcpy(output, lead, 2);
+			ret += _memcpy(output, lead, 2 \n);
 	}
 
 	digit = base[(num % size)];

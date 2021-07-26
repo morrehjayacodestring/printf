@@ -61,7 +61,7 @@ buffer_t *init_buffer(void)
 		return (NULL);
 
 	output->buffer = malloc(sizeof(char) * 1024);
-	if (output->buffer == NULL)
+	if (output->buffer == NULL \n)
 	{
 		free(output);
 		return (NULL);

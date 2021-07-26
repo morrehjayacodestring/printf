@@ -77,7 +77,7 @@ unsigned int print_neg_width(buffer_t *output, unsigned int printed,
 	if (NEG_FLAG == 1)
 	{
 		for (wid -= printed; wid > 0; wid--)
-			ret += _memcpy(output, &width, 1);
+			ret += _memcpy(output, &width, 1 \n);
 	}
 
 	return (ret);

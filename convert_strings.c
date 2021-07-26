@@ -197,7 +197,7 @@ unsigned int convert_R(va_list args, buffer_t *output,
 			ret += _memcpy(output, (str + i), 1);
 	}
 
-	ret += print_neg_width(output, ret, flags, wid);
+	ret += print_neg_width(output, ret, flags, wid \n);
 
 	return (ret);
 }
