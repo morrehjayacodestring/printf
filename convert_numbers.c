@@ -70,7 +70,6 @@ unsigned int convert_di(va_list args, buffer_t *output,
 	/* Handle plus flag when zero flag is not active */
 	if (ZERO_FLAG == 0 && (PLUS_FLAG == 1 && d >= 0))
 		ret += _memcpy(output, &plus, 1);
-        
 	if (!(d == 0 && prec == 0))
 		ret += convert_sbase(output, d, "0123456789",
 		flags, 0, prec);
