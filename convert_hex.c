@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "holberton.h"
 
 unsigned int convert_x(va_list args, buffer_t *output,
