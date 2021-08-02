@@ -33,4 +33,4 @@ printf("String:[%s]\n", "I am a string !");
 _printf("Address:[%p]\n", addr);
 printf("Address:[%p]\n", addr);
 return (0);
-}~
+} ~
