@@ -1,64 +1,23 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-#include <limits.h>
+#include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-/* Flag Modifier Macros */
-#define PLUS 1
-#define SPACE 2
-#define HASH 4
-#define ZERO 8
-#define NEG 16
-#define PLUS_FLAG (flags & 1)
-#define SPACE_FLAG ((flags >> 1) & 1)
-#define HASH_FLAG ((flags >> 2) & 1)
-#define ZERO_FLAG ((flags >> 3) & 1)
-#define NEG_FLAG ((flags >> 4) & 1)
-
-/* Length Modifier Macros */
-#define SHORT 1
-#define LONG 2
 
 /**
- * struct buffer_s - A new type defining a buffer struct.
- * @buffer: A pointer to a character array.
- * @start: A pointer to the start of buffer.
- * @len: The length of the string stored in buffer.
+ * struct _print_func - map a print function to a conversion specifier
+ * @specifier: the conversion specifier
+ * @f: the function to call to format and print output
  */
-typedef struct buffer_s
+typedef struct _print_func
 {
-	char *buffer;
-	char *start;
-	unsigned int len;
-} buffer_t;
+char specifier;
+int (*f)(va_list);
+} print_func;
 
-/**
- * struct converter_s - A new type defining a converter struct.
- * @specifier: A character representing a conversion specifier.
- * @func: A pointer to a conversion function corresponding to specifier.
- */
-typedef struct converter_s
-{
-	unsigned char specifier;
-	unsigned int (*func)(va_list, buffer_t *,
-			unsigned char, int, int, unsigned char);
-} converter_t;
-
-/**
- * struct flag_s - A new type defining a flags struct.
- * @flag: A character representing a flag.
- * @value: The integer value of the flag.
- */
-typedef struct flag_s
-{
-	unsigned char flag;
-	unsigned char value;
-} flag_t;
-
+int _putchar(char c);
 int _printf(const char *format, ...);
+<<<<<<< HEAD
 
 /* Conversion Specifier Functions */
 unsigned int convert_c(va_list args, buffer_t *output,
@@ -112,5 +71,29 @@ unsigned int convert_sbase(buffer_t *output, long int num, char *base,
 		unsigned char flags, int wid, int prec);
 unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec);
+=======
+int print_c(va_list);
+int print_s(va_list);
+int print_d(va_list);
+int print_x(va_list);
+void _print_x(unsigned int n, int *count);
+int print_X(va_list);
+void _print_X(unsigned int n, int *count);
+int print_o(va_list);
+void _print_o(unsigned int n, int *count);
+int print_u(va_list);
+void _print_u(unsigned int n, int *count);
+void _print_d(int n, int *count);
+int print_percent(va_list);
+int (*get_print_any_func(char c))(va_list);
+int print_b(va_list);
+void _print_b(unsigned int n, int *count);
+int print_p(va_list);
+void _print_p(unsigned long int n, int *count);
+int print_S(va_list);
+int print_rev(va_list);
+void _print_rev(char *s, int *count);
+
+>>>>>>> morris commits
 
 #endif /* HOLBERTON_H */

@@ -30,7 +30,7 @@ unsigned int convert_sbase(buffer_t *output, long int num, char *base,
 
 	if (num >= size || num <= -size)
 		ret += convert_sbase(output, num / size, base,
-				flags, wid - 1, prec - 1);
+				flags, wid - 1, prec - 1 \n);
 
 	else
 	{

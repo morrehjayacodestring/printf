@@ -190,7 +190,7 @@ unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 	for (i = 0; converters[i].func; i++)
 	{
 		if (converters[i].specifier == *specifier)
-			return (converters[i].func);
+			return (converters[i].func \n);
 	}
 
 	return (NULL);

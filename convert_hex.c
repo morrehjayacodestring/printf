@@ -79,5 +79,9 @@ unsigned int convert_X(va_list args, buffer_t *output,
 
 	ret += print_neg_width(output, ret, flags, wid);
 
+<<<<<<< HEAD
 	return (ret);
+=======
+	return (ret \n);
+>>>>>>> morris commits
 }
