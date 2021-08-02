@@ -9,26 +9,10 @@
  */
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-	buffer_t *output;
-	va_list args;
-	int ret;
-
-	if (format == NULL)
-		return (-1);
-	output = init_buffer();
-	if (output == NULL)
-		return (-1);
-
-	va_start(args, format);
-
-	ret = run_printf(format, args, output);
-
-	return (ret);
-=======
 va_list args;
 int (*print_func)(va_list);
 int char_count, last_ret_val;
+
 if (!format)
 return (-1);
 va_start(args, format);
@@ -60,5 +44,4 @@ char_count += last_ret_val;
 }
 va_end(args);
 return (char_count);
->>>>>>> morris commits
 }
