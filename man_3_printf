@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "27 July 2021" "_Printf Man Page"
+.TH _PRINTF 3 "02 August 2021" "_Printf Man Page"
 .SH NAME
 .B _printf
 - formats and writes data to stdout
